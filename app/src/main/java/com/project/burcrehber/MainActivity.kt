@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import com.project.burcrehber.adapter.HoroscopeArrayAdapter
+import com.project.burcrehber.adapter.HoroscopeBaseAdapter
 import com.project.burcrehber.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             R.id.horoscopeNameText,
             burclar
         )*/
-        val adapter=HoroscopeArrayAdapter(this,R.layout.single_row_horoscope,R.id.horoscopeNameText,burclar,burcTarihleri,burcResimleri)
+        val adapter=HoroscopeBaseAdapter(this)
         binding.horoscopeListView.adapter=adapter
     }
 }
