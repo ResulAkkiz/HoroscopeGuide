@@ -16,7 +16,7 @@ class HoroscopeDetailActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val horoscope = intent.extras?.get("horoscope") as Horoscope
+        val horoscope = intent.extras?.getSerializable("horoscope",Horoscope::class.java) as Horoscope
         binding.horoscopeDetailText.text = horoscope.horoscopeDetailText
         binding.header.setImageResource(horoscope.horoscopeBigSymbol)
         setSupportActionBar(binding.animToolbar)
@@ -32,7 +32,7 @@ class HoroscopeDetailActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        finish()
+        onBackPressed()
         return super.onSupportNavigateUp()
     }
 

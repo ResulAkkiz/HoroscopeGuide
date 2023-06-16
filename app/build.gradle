@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.project.burcrehber"
-        minSdk 26
+        minSdk 33
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.glomadrian:Grav:1.1'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
